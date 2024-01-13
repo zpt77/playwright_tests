@@ -9,7 +9,7 @@ test('Rejestracja nowego użytkownika', async ({ page }) => {
     const registrationPage = new RegistrationPage(page, baseUrl);
     await registrationPage.open();
     const username = generateRandomString(8,4);
-
+/*
     const userData: UserData = {
       firstName: 'John',
       lastName: 'tomzub52',
@@ -22,8 +22,8 @@ test('Rejestracja nowego użytkownika', async ({ page }) => {
       username: username,
       password: 'test'
     };
-  
-    await registrationPage.registerNewUser(userData);
+  */
+    await registrationPage.registerNewUser();
 
     const pageContent = await page.content();    
     await page.screenshot({ path: 'after_registration.png' });
